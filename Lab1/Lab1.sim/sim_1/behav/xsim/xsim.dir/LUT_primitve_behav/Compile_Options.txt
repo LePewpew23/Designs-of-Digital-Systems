@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "LUT_primitve_behav" "xil_defaultlib.LUT_primitve" -log "elaborate.log" 

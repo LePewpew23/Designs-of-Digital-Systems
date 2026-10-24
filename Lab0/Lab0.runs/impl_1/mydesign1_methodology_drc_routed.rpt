@@ -1,0 +1,55 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Mon Sep  7 20:42:47 2026
+| Host         : DESKTOP-0MQOB8O running 64-bit major release  (build 9200)
+| Command      : report_methodology -file mydesign1_methodology_drc_routed.rpt -pb mydesign1_methodology_drc_routed.pb -rpx mydesign1_methodology_drc_routed.rpx
+| Design       : mydesign1
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 4
++-----------+----------+-------------------------------+--------+
+| Rule      | Severity | Description                   | Checks |
++-----------+----------+-------------------------------+--------+
+| TIMING-18 | Warning  | Missing input or output delay | 4      |
++-----------+----------+-------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on din[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on din[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on dout[0] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on dout[1] relative to the rising and/or falling clock edge(s) of clk.
+Related violations: <none>
+
+

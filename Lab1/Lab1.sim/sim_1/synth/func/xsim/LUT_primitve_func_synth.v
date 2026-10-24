@@ -1,0 +1,139 @@
+// Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+// Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+// Date        : Wed Oct 14 18:59:27 2026
+// Host        : DESKTOP-0MQOB8O running 64-bit major release  (build 9200)
+// Command     : write_verilog -mode funcsim -nolib -force -file {C:/Users/Kevinson/Design of Digital
+//               Systems/Lab1/Lab1.sim/sim_1/synth/func/xsim/LUT_primitve_func_synth.v}
+// Design      : when_else
+// Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
+//               or synthesized. This netlist cannot be used for SDF annotated simulation.
+// Device      : xc7a100tcsg324-1
+// --------------------------------------------------------------------------------
+`timescale 1 ps / 1 ps
+
+(* NotValidForBitStream *)
+(* \DesignAttr:TELEMETRY_DATA  = "{\n  \"Design Characteristics Data\": {\n    \"Simulation\": {\n      \"Target Simulator\": \"XSim\",\n      \"Run Time\": {\n        \"behavioral \": \"4.256000\"\n      }\n    }\n  },\n  \"Design Flow Data\": {\n    \"Design Data\": {\n      \"Design Mode\": \"Project flow\",\n      \"Top Methodology\": \"VHDL\"\n    },\n    \"Synthesis\": {\n      \"Run Time\": \"48.170000 seconds\"\n    }\n  }\n}" *) 
+module when_else
+   (x,
+    y,
+    z);
+  input [1:0]x;
+  input [1:0]y;
+  output z;
+
+  wire [1:0]x;
+  wire [1:0]x_IBUF;
+  wire [1:0]y;
+  wire [1:0]y_IBUF;
+  wire z;
+  wire z_OBUF;
+
+  IBUF \x_IBUF[0]_inst 
+       (.I(x[0]),
+        .O(x_IBUF[0]));
+  IBUF \x_IBUF[1]_inst 
+       (.I(x[1]),
+        .O(x_IBUF[1]));
+  IBUF \y_IBUF[0]_inst 
+       (.I(y[0]),
+        .O(y_IBUF[0]));
+  IBUF \y_IBUF[1]_inst 
+       (.I(y[1]),
+        .O(y_IBUF[1]));
+  OBUF z_OBUF_inst
+       (.I(z_OBUF),
+        .O(z));
+  LUT4 #(
+    .INIT(16'h9009)) 
+    z_OBUF_inst_i_1
+       (.I0(x_IBUF[0]),
+        .I1(y_IBUF[0]),
+        .I2(x_IBUF[1]),
+        .I3(y_IBUF[1]),
+        .O(z_OBUF));
+endmodule
+`ifndef GLBL
+`define GLBL
+`timescale  1 ps / 1 ps
+
+module glbl ();
+
+    parameter ROC_WIDTH = 100000;
+    parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
+
+//--------   STARTUP Globals --------------
+    wire GSR;
+    wire GTS;
+    wire GWE;
+    wire PRLD;
+    wire GRESTORE;
+    tri1 p_up_tmp;
+    tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
+
+    wire PROGB_GLBL;
+    wire CCLKO_GLBL;
+    wire FCSBO_GLBL;
+    wire [3:0] DO_GLBL;
+    wire [3:0] DI_GLBL;
+   
+    reg GSR_int;
+    reg GTS_int;
+    reg PRLD_int;
+    reg GRESTORE_int;
+
+//--------   JTAG Globals --------------
+    wire JTAG_TDO_GLBL;
+    wire JTAG_TCK_GLBL;
+    wire JTAG_TDI_GLBL;
+    wire JTAG_TMS_GLBL;
+    wire JTAG_TRST_GLBL;
+
+    reg JTAG_CAPTURE_GLBL;
+    reg JTAG_RESET_GLBL;
+    reg JTAG_SHIFT_GLBL;
+    reg JTAG_UPDATE_GLBL;
+    reg JTAG_RUNTEST_GLBL;
+
+    reg JTAG_SEL1_GLBL = 0;
+    reg JTAG_SEL2_GLBL = 0 ;
+    reg JTAG_SEL3_GLBL = 0;
+    reg JTAG_SEL4_GLBL = 0;
+
+    reg JTAG_USER_TDO1_GLBL = 1'bz;
+    reg JTAG_USER_TDO2_GLBL = 1'bz;
+    reg JTAG_USER_TDO3_GLBL = 1'bz;
+    reg JTAG_USER_TDO4_GLBL = 1'bz;
+
+    assign (strong1, weak0) GSR = GSR_int;
+    assign (strong1, weak0) GTS = GTS_int;
+    assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
+
+    initial begin
+	GSR_int = 1'b1;
+	PRLD_int = 1'b1;
+	#(ROC_WIDTH)
+	GSR_int = 1'b0;
+	PRLD_int = 1'b0;
+    end
+
+    initial begin
+	GTS_int = 1'b1;
+	#(TOC_WIDTH)
+	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
+    end
+
+endmodule
+`endif

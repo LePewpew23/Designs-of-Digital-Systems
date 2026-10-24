@@ -1,0 +1,7 @@
+Running: xsim.dir/LUT_primitve_behav/xsimk.exe -simmode gui -wdb LUT_primitve_behav.wdb -simrunnum 0 -socket 62199
+Design successfully loaded
+Design Loading Memory Usage: 18604 KB (Peak: 18604 KB)
+Design Loading CPU Usage: 93 ms
+Simulation completed
+Simulation Memory Usage: 19396 KB (Peak: 19396 KB)
+Simulation CPU Usage: 296 ms

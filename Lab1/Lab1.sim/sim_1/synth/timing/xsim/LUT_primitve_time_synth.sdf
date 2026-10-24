@@ -1,0 +1,83 @@
+(DELAYFILE 
+(SDFVERSION "3.0" )
+(DESIGN "when_else")
+(DATE "Wed Oct 14 18:39:58 2026")
+(VENDOR "XILINX")
+(PROGRAM "Vivado")
+(VERSION "2026.1")
+(DIVIDER /)
+(TIMESCALE 1ps)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE x_IBUF\[0\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (837.7:971.3:971.3) (837.7:971.3:971.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE x_IBUF\[1\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (837.7:971.3:971.3) (837.7:971.3:971.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE y_IBUF\[0\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (837.7:971.3:971.3) (837.7:971.3:971.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "IBUF")
+  (INSTANCE y_IBUF\[1\]_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (837.7:971.3:971.3) (837.7:971.3:971.3))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "OBUF")
+  (INSTANCE z_OBUF_inst)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I O (2476.8:2633.1:2633.1) (2476.8:2633.1:2633.1))
+    )
+  )
+)
+(CELL 
+  (CELLTYPE "LUT4")
+  (INSTANCE z_OBUF_inst_i_1)
+  (DELAY 
+    (PATHPULSE (50.0))
+    (ABSOLUTE 
+      (IOPATH I3 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I2 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I1 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+      (IOPATH I0 O (100.0:124.0:124.0) (100.0:124.0:124.0))
+    )
+  )
+)
+(CELL 
+    (CELLTYPE "when_else")
+    (INSTANCE )
+    (DELAY
+      (ABSOLUTE
+      (INTERCONNECT x_IBUF\[0\]_inst/O z_OBUF_inst_i_1/I0 (762.7:802.9:802.9) (762.7:802.9:802.9))
+      (INTERCONNECT x_IBUF\[1\]_inst/O z_OBUF_inst_i_1/I2 (762.7:802.9:802.9) (762.7:802.9:802.9))
+      (INTERCONNECT y_IBUF\[0\]_inst/O z_OBUF_inst_i_1/I1 (762.7:802.9:802.9) (762.7:802.9:802.9))
+      (INTERCONNECT y_IBUF\[1\]_inst/O z_OBUF_inst_i_1/I3 (762.7:802.9:802.9) (762.7:802.9:802.9))
+      (INTERCONNECT z_OBUF_inst_i_1/O z_OBUF_inst/I (763.7:803.9:803.9) (763.7:803.9:803.9))
+)
