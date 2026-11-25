@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use ieee.numeric_std.all;
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -43,7 +43,16 @@ end Logic_Unit;
 
 architecture dataflow of Logic_Unit is
 
+
+
 begin
 
+   with sel select  
+    r <= not a when "00",
+         a and b when "01",
+         a or b when "10",
+         a xor b when "11",
+         (others => '0') when others;
+     
 
 end dataflow;

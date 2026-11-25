@@ -31,7 +31,7 @@ use ieee.numeric_std.all;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Multiplier is
+entity mult is
     generic(n: integer := 6);
     port(
         sel : in std_logic;
@@ -39,11 +39,26 @@ entity Multiplier is
         b : in std_logic_vector(n-1 downto 0);
         r : out std_logic_vector(n-1 downto 0)
     );
-end Multiplier;
+end mult;
 
-architecture dataflow of Multiplier is
+architecture dataflow of mult is
+
+signal product    : unsigned(n+n-1 downto 0);
+signal high    : unsigned(n-1 downto 0);
+signal low     : unsigned(n-1 downto 0);
 
 begin
+
+    product <= unsigned(a) * unsigned(b);
+    --product slplit
+    low <=  unsigned(product(n-1 downto 0));
+    high <= unsigned(product((n+n)-1 downto n));
+    
+    --selection for upper or lower operation answer
+    r <= std_logic_vector(low) when sel = '0' else
+             std_logic_vector(high);
+    
+    
 
 
 end dataflow;

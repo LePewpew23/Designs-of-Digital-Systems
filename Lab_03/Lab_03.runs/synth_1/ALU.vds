@@ -1,0 +1,255 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 25-nov-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Wed Nov 25 05:28:11 2026
+# Process ID         : 17692
+# Current directory  : H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.runs/synth_1
+# Command line       : vivado.exe -log ALU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU.tcl
+# Log file           : H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.runs/synth_1/ALU.vds
+# Journal file       : H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.runs/synth_1\vivado.jou
+# Running On         : Accomplishments
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 9800X3D 8-Core Processor           
+# CPU Frequency      : 4691 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 100531 MB
+# Swap memory        : 6442 MB
+# Total Virtual      : 106973 MB
+# Available Virtual  : 58113 MB
+#-----------------------------------------------------------
+source ALU.tcl -notrace
+Command: synth_design -top ALU -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5008] Incremental synthesis strategy default
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30920
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1362.234 ; gain = 578.176
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ALU' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:43]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Adder' declared at 'H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Adder.vhd:35' bound to instance 'A1' of component 'adder' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'Adder' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Adder.vhd:45]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Adder.vhd:73]
+INFO: [Synth 8-226] default block is never used [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Adder.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'Adder' (0#1) [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Adder.vhd:45]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'mult' declared at 'H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Multiplier.vhd:34' bound to instance 'A2' of component 'mult' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'mult' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Multiplier.vhd:44]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mult' (0#1) [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Multiplier.vhd:44]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Logic_Unit' declared at 'H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Logic_Unit.vhd:34' bound to instance 'A3' of component 'logic_unit' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'Logic_Unit' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Logic_Unit.vhd:44]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Logic_Unit.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'Logic_Unit' (0#1) [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Logic_Unit.vhd:44]
+	Parameter n bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Shifter' declared at 'H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Shifter.vhd:35' bound to instance 'A4' of component 'shifter' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:109]
+INFO: [Synth 8-638] synthesizing module 'Shifter' [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Shifter.vhd:48]
+	Parameter n bound to: 6 - type: integer 
+	Parameter m bound to: 3 - type: integer 
+INFO: [Synth 8-226] default block is never used [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Shifter.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'Shifter' (0#1) [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/Shifter.vhd:48]
+INFO: [Synth 8-226] default block is never used [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:113]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (0#1) [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/sources_1/new/ALU.vhd:43]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1482.238 ; gain = 698.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1482.238 ; gain = 698.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1482.238 ; gain = 698.180
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1482.238 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/constrs_1/new/constrants.xdc]
+Finished Parsing XDC File [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/constrs_1/new/constrants.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.srcs/constrs_1/new/constrants.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ALU_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ALU_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1537.707 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1537.852 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1537.852 ; gain = 753.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1537.852 ; gain = 753.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1537.852 ; gain = 753.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1537.852 ; gain = 753.793
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input    7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      6 Bit         XORs := 1     
++---Muxes : 
+	   2 Input    6 Bit        Muxes := 3     
+	   4 Input    6 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1577.523 ; gain = 793.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1715.012 ; gain = 930.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1715.012 ; gain = 930.953
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1726.133 ; gain = 942.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT2   |    16|
+|3     |LUT3   |     8|
+|4     |LUT4   |    14|
+|5     |LUT5   |    21|
+|6     |LUT6   |    41|
+|7     |IBUF   |    16|
+|8     |OBUF   |     6|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 2000.000 ; gain = 1160.328
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2000.000 ; gain = 1215.941
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2009.184 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2012.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 328d44f7
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+35 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2012.883 ; gain = 1427.664
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2012.883 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'H:/Chrome Downloads/Designs-of-Digital-Systems-main/Lab_03/Lab_03.runs/synth_1/ALU.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file ALU_utilization_synth.rpt -pb ALU_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 25 05:28:39 2026...

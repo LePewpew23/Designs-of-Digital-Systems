@@ -22,6 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -39,14 +40,25 @@ entity Shifter is
     port(
         sel : in std_logic_vector(1 downto 0);
         a : in std_logic_vector(n-1 downto 0);
-        b : in std_logic_vector(m-1 downto 0);
+        b : in std_logic_vector(m-1 downto 0);--says how much to shifts
         r : out std_logic_vector(n-1 downto 0)
         );
 end Shifter;
 
 architecture dataflow of Shifter is
 
+signal shift_amount : integer;
+
 begin
 
+shift_amount <= to_integer(unsigned(b));
+
+with sel select
+    r <= std_logic_vector(unsigned(a) sll shift_amount) when "00",
+         std_logic_vector(unsigned(a) sll shift_amount) when "01",
+         std_logic_vector(unsigned(a) srl shift_amount) when "10",
+         std_logic_vector(shift_right(signed(a), shift_amount)) when "11",
+         (others => '0') when others;
+            
 
 end dataflow;

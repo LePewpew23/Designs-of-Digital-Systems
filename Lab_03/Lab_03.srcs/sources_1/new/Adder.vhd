@@ -57,12 +57,34 @@ architecture dataflow of Adder is
     
 begin
 
+    --  Select
+    carry_sel <= sel(0);
+    sub <= sel(1);
+    --  Inputs
+    a_long <= '0' & unsigned(a); 
+    b_long <= '0' & (not unsigned(b)) when sub = '1' else
+              '0' & unsigned(b);
    
-   with sel select
-      r <=  a + b when "00",
- a + b  when "01",
- <expression> when others;
-			
-			
-
+   --addintion and substaction
+    op1_long <= a_long + b_long;
+    op2_long <= a_long + b_long + 1; 
+    
+    --selects te operation output
+    with sub select 
+        sum_long <= op1_long when '0',
+                    op2_long when '1',
+                    TO_UNSIGNED(0,n+1) when others;
+                    
+   sum <= std_logic_vector(sum_long(n-1 downto 0));
+   
+   carry_long <= TO_UNSIGNED(0,n) & sum_long(n downto n);
+                    
+   carry <=  std_logic_vector(carry_long(n-1 downto 0));             
+                
+--output	
+   with carry_sel select
+      r <= sum when '0',
+           carry when '1',
+           (others => '0') when others;
+           		
 end dataflow;
